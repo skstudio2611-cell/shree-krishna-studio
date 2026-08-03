@@ -1,197 +1,95 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 export const metadata: Metadata = {
 
   metadataBase: new URL(
-    "https://your-domain.com"
+    "https://shree-krishna-studio.vercel.app"
   ),
-
 
   title: {
     default:
-      "Shree Krishna Studio | Best Wedding Photographer Gujarat",
-
+      "Shree Krishna Studio | Wedding Photography & Films",
     template:
       "%s | Shree Krishna Studio",
   },
 
-
   description:
-    "Shree Krishna Studio Gujarat provides premium wedding photography, cinematic wedding films, pre wedding shoots, engagement photography, haldi, reception and drone wedding coverage.",
+    "Shree Krishna Studio captures weddings, pre-weddings, engagements, haldi, receptions, cinematic films, drone coverage, and premium albums across Gujarat.",
 
-  verification: {
-  google: "dbJeebzOUcjXtXmOAlWg1YYyhLSOVU7LgIY7kgoGCsQ",
-}, 
-  
 
   keywords: [
-
     "Shree Krishna Studio",
-
     "Wedding Photographer Gujarat",
-
-    "Wedding Photographer Surat",
-
-    "Best Wedding Photography Gujarat",
-
-    "Cinematic Wedding Films",
-
-    "Pre Wedding Photographer",
-
-    "Wedding Videography",
-
-    "Drone Wedding Photography",
-
-    "Luxury Wedding Photographer",
-
-    "Wedding Album Design",
-
+    "Wedding Photography Surat",
+    "Wedding Cinematography",
+    "Pre Wedding Shoot",
+    "Engagement Photography",
+    "Haldi Photography",
+    "Reception Photography",
+    "Drone Wedding Shoot",
+    "Wedding Films",
   ],
 
 
-
-  authors:[
+  authors: [
     {
-      name:
-      "Shree Krishna Studio"
-    }
+      name: "Shree Krishna Studio",
+    },
   ],
-
 
 
   creator:
     "Shree Krishna Studio",
 
 
-
-  publisher:
-    "Shree Krishna Studio",
-
-
-
-
-  openGraph:{
-
+  openGraph: {
 
     title:
-    "Shree Krishna Studio | Wedding Photography & Films",
-
+      "Shree Krishna Studio | Wedding Photography & Films",
 
     description:
-    "Premium wedding photography and cinematic films capturing your forever moments.",
-
+      "Premium Wedding Photography, Cinematic Films & Pre Wedding Shoots in Gujarat.",
 
     url:
-    "https://your-domain.com",
-
+      "https://shree-krishna-studio.vercel.app",
 
     siteName:
-    "Shree Krishna Studio",
-
+      "Shree Krishna Studio",
 
     locale:
-    "en_IN",
-
+      "en_IN",
 
     type:
-    "website",
-
-
-    images:[
-
-      {
-        url:
-        "/images/hero.jpg",
-
-        width:
-        1200,
-
-        height:
-        630,
-
-        alt:
-        "Shree Krishna Studio Wedding Photography",
-
-      }
-
-    ]
-
+      "website",
   },
 
 
-
-
-
-  twitter:{
-
-
-    card:
-    "summary_large_image",
-
-
-    title:
-    "Shree Krishna Studio | Wedding Photographer",
-
-
-    description:
-    "Premium Wedding Photography & Cinematic Films Gujarat",
-
-
-    images:[
-      "/images/hero.jpg"
-    ]
-
-  },
-
-
-
-
-
-  icons:{
-
+  icons: {
 
     icon:
-    "/favicon.png",
-
+      "/favicon.png",
 
     shortcut:
-    "/favicon.png",
-
+      "/favicon.png",
 
     apple:
-    "/favicon.png",
+      "/favicon.png",
 
   },
 
 
+  robots: {
 
+    index:
+      true,
 
-
-  robots:{
-
-
-    index:true,
-
-    follow:true,
-
-
-    googleBot:{
-
-
-      index:true,
-
-      follow:true,
-
-
-    }
+    follow:
+      true,
 
   },
-
 
 };
-
 
 
 export default function RootLayout({
@@ -207,25 +105,13 @@ export default function RootLayout({
 
   return (
 
-    <html
-      lang="en"
-      className="h-full antialiased"
-    >
+    <html lang="en" className="h-full antialiased">
 
-
-      <body
-        className="
-        min-h-full
-        flex
-        flex-col
-        "
-      >
+      <body className="min-h-full flex flex-col">
 
         {children}
 
-
       </body>
-
 
     </html>
 
