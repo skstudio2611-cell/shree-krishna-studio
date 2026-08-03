@@ -14,7 +14,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import Stats from "@/components/Stats";
-
+import BookingForm from "@/components/BookingForm";
 
 
 export default function Home() {
@@ -34,6 +34,7 @@ export default function Home() {
         <Testimonials />
         <WhyChoose />
         <Contact />
+        <BookingForm />
       </main>
 
       <Footer />

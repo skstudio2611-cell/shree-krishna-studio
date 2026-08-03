@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
 
 const navItems = [
   { name: "Home", href: "#" },
@@ -14,136 +16,491 @@ const navItems = [
   { name: "Contact", href: "#contact" },
 ];
 
+
 export default function Header() {
+
   const [scrolled, setScrolled] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
 
+
+
   useEffect(() => {
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
+
+      setScrolled(window.scrollY > 40);
+
     };
 
-    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener(
+      "scroll",
+      handleScroll
+    );
+
+
+    return () => {
+
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+
+    };
+
+
   }, []);
 
+
+
+
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+
+    <motion.header
+
+      initial={{
+        y:-100
+      }}
+
+      animate={{
+        y:0
+      }}
+
+      transition={{
+        duration:0.8
+      }}
+
+
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-lg shadow-lg"
-          : "bg-transparent"
+        ?
+        "bg-black/85 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
+        :
+        "bg-transparent"
       }`}
+
     >
+
+
+
       <div className="max-w-7xl mx-auto px-6">
+
 
         <div className="flex justify-between items-center h-20">
 
+
+
           {/* Logo */}
 
-          <Link href="/" className="flex items-center gap-3">
 
-            <Image
-  src="/images/logo.png"
-  alt="Shree Krishna Studio"
-  width={55}
-  height={55}
-  loading="eager"
-  className="rounded-full object-cover"
-/>
+
+          <Link
+            href="/"
+            className="flex items-center gap-3 group"
+          >
+
+
+
+            <motion.div
+
+              whileHover={{
+                rotate:360,
+                scale:1.1
+              }}
+
+              transition={{
+                duration:0.8
+              }}
+
+              className="relative"
+
+            >
+
+
+              <div className="
+              absolute
+              inset-0
+              rounded-full
+              bg-green-400/30
+              blur-lg
+              group-hover:bg-green-400/50
+              transition
+              "
+              />
+
+
+              <Image
+
+                src="/images/logo.png"
+
+                alt="Shree Krishna Studio"
+
+                width={58}
+
+                height={58}
+
+                priority
+
+                className="
+                relative
+                rounded-full
+                object-cover
+                "
+
+              />
+
+
+            </motion.div>
+
+
+
 
             <div>
 
-              <h1 className="text-white font-bold text-xl leading-none">
+
+              <h1 className="
+              text-white
+              font-bold
+              text-xl
+              leading-none
+              tracking-wide
+              ">
+
                 SHREE KRISHNA
+
               </h1>
 
-              <p className="text-green-400 text-sm">
+
+              <p className="
+              text-green-400
+              text-sm
+              tracking-widest
+              ">
+
                 STUDIO
+
               </p>
+
 
             </div>
 
+
+
           </Link>
 
-          {/* Desktop Menu */}
 
-          <nav className="hidden lg:flex items-center gap-8">
 
-            {navItems.map((item) => (
+
+
+          {/* Desktop Navigation */}
+
+
+
+          <nav className="
+          hidden
+          lg:flex
+          items-center
+          gap-8
+          ">
+
+
+            {navItems.map((item)=>(
+
+
               <a
+
                 key={item.name}
+
                 href={item.href}
-                className="text-white hover:text-green-400 transition font-medium"
+
+                className="
+                relative
+                text-white
+                font-medium
+                group
+                "
+
               >
+
+
                 {item.name}
+
+
+
+                <span className="
+                absolute
+                left-0
+                -bottom-2
+                w-0
+                h-[2px]
+                bg-green-400
+                transition-all
+                duration-300
+                group-hover:w-full
+                "
+                />
+
+
+
               </a>
+
+
             ))}
 
-          </nav>
 
-          {/* Book Now */}
+          </nav>
+                    {/* Book Now Button */}
+
 
           <div className="hidden lg:block">
 
-            <a
+
+            <motion.a
+
               href="#contact"
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl transition"
+
+              whileHover={{
+                scale:1.05
+              }}
+
+              whileTap={{
+                scale:0.95
+              }}
+
+              className="
+              relative
+              overflow-hidden
+              bg-green-500
+              text-white
+              px-7
+              py-3
+              rounded-xl
+              font-semibold
+              shadow-lg
+              shadow-green-500/30
+              "
+
             >
-              Book Now
-            </a>
+
+
+              <span className="relative z-10">
+                Book Now
+              </span>
+
+
+              <span className="
+              absolute
+              inset-0
+              bg-green-600
+              translate-y-full
+              hover:translate-y-0
+              transition-transform
+              duration-300
+              "
+              />
+
+
+            </motion.a>
+
 
           </div>
 
-          {/* Mobile Button */}
+
+
+
+
+          {/* Mobile Menu Button */}
+
+
 
           <button
-            className="lg:hidden text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
+
+            className="
+            lg:hidden
+            text-white
+            "
+
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
+
           >
-            {menuOpen ? <X size={30} /> : <Menu size={30} />}
+
+
+            <motion.div
+
+              animate={{
+                rotate: menuOpen ? 90 : 0
+              }}
+
+            >
+
+
+              {menuOpen
+                ?
+                <X size={32}/>
+                :
+                <Menu size={32}/>
+              }
+
+
+            </motion.div>
+
+
           </button>
 
+
+
         </div>
+
 
       </div>
 
+
+
+
+
+
       {/* Mobile Menu */}
+
+
+
+      <AnimatePresence>
+
 
       {menuOpen && (
 
-        <div className="lg:hidden bg-black/95 backdrop-blur-xl">
 
-          <div className="flex flex-col p-6 space-y-5">
+        <motion.div
 
-            {navItems.map((item) => (
+          initial={{
+            opacity:0,
+            height:0
+          }}
 
-              <a
+          animate={{
+            opacity:1,
+            height:"auto"
+          }}
+
+          exit={{
+            opacity:0,
+            height:0
+          }}
+
+          transition={{
+            duration:0.4
+          }}
+
+
+          className="
+          lg:hidden
+          bg-black/95
+          backdrop-blur-xl
+          overflow-hidden
+          "
+
+        >
+
+
+          <div className="
+          flex
+          flex-col
+          p-6
+          space-y-5
+          ">
+
+
+
+            {navItems.map((item)=>(
+
+
+              <motion.a
+
                 key={item.name}
+
                 href={item.href}
-                className="text-white text-lg hover:text-green-400"
-                onClick={() => setMenuOpen(false)}
+
+                onClick={() =>
+                  setMenuOpen(false)
+                }
+
+
+                whileHover={{
+                  x:10
+                }}
+
+
+                className="
+                text-white
+                text-lg
+                hover:text-green-400
+                transition
+                "
+
               >
+
                 {item.name}
-              </a>
+
+
+              </motion.a>
+
 
             ))}
 
-            <a
+
+
+
+
+            <motion.a
+
               href="#contact"
-              className="bg-green-600 text-center text-white py-3 rounded-xl mt-4"
-              onClick={() => setMenuOpen(false)}
+
+              onClick={() =>
+                setMenuOpen(false)
+              }
+
+
+              whileTap={{
+                scale:0.95
+              }}
+
+
+              className="
+              bg-green-500
+              text-white
+              text-center
+              py-3
+              rounded-xl
+              font-semibold
+              "
+
             >
+
               Book Now
-            </a>
+
+
+            </motion.a>
+
+
 
           </div>
 
-        </div>
+
+        </motion.div>
+
 
       )}
 
-    </header>
+
+      </AnimatePresence>
+
+
+
+    </motion.header>
+
+
   );
+
 }
