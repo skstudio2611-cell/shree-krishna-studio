@@ -47,14 +47,14 @@ export const metadata: Metadata = {
 
     siteName: "Shree Krishna Studio",
 
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Shree Krishna Studio",
-      },
-    ],
+   images: [
+  {
+    url: "/images/og-image.png",
+    width: 1200,
+    height: 630,
+    alt: "Shree Krishna Studio",
+  },
+],
 
     locale: "en_IN",
 
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description:
       "Premium Wedding Photography & Cinematic Films",
 
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.png"],
   },
 
   icons: {
