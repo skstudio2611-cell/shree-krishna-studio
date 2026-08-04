@@ -6,25 +6,30 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://shree-krishna-studio.vercel.app"),
 
   title: {
-    default: "Shree Krishna Studio | Wedding Photography & Films",
-    template: "%s | Shree Krishna Studio",
-  },
+  default: "Wedding Photographer Surat | Shree Krishna Studio",
+  template: "%s | Shree Krishna Studio",
+},
 
-  description:
-    "Premium Wedding Photography, Cinematic Films, Pre Wedding Shoots, Drone Coverage, Wedding Albums and Event Photography across Gujarat.",
+description:
+  "Shree Krishna Studio is a premium Wedding Photographer in Surat and Gujarat. We specialize in wedding photography, cinematic wedding films, pre wedding shoots, engagement photography, drone coverage, and luxury wedding albums across Gujarat.",
 
-  keywords: [
-    "Shree Krishna Studio",
-    "Wedding Photographer Gujarat",
-    "Wedding Photographer Surat",
-    "Wedding Photography",
-    "Wedding Cinematography",
-    "Pre Wedding Shoot",
-    "Drone Wedding Shoot",
-    "Wedding Films",
-    "Wedding Albums",
-    "Event Photography",
-  ],
+ keywords: [
+  "Wedding Photographer Surat",
+  "Wedding Photographer Gujarat",
+  "Best Wedding Photographer Surat",
+  "Wedding Photography Gujarat",
+  "Pre Wedding Shoot Gujarat",
+  "Pre Wedding Photographer Surat",
+  "Wedding Cinematography Surat",
+  "Wedding Films Gujarat",
+  "Drone Wedding Photography Gujarat",
+  "Engagement Photographer Surat",
+  "Haldi Photography Gujarat",
+  "Reception Photography Surat",
+  "Luxury Wedding Photographer Gujarat",
+  "Candid Wedding Photographer Surat",
+  "Shree Krishna Studio",
+],
 
   authors: [
     {

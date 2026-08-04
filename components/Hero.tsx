@@ -4,11 +4,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Camera, Play } from "lucide-react";
 
-
 export default function Hero() {
-
   return (
-
     <section
       id="home"
       className="
@@ -20,70 +17,48 @@ export default function Hero() {
       items-center
       "
     >
-
-
       {/* Background Image */}
 
-
       <motion.div
-
         initial={{
-          scale:1.15
+          scale: 1.15,
         }}
-
         animate={{
-          scale:1
+          scale: 1,
         }}
-
         transition={{
-          duration:2.5,
-          ease:"easeOut"
+          duration: 2.5,
+          ease: "easeOut",
         }}
-
         className="
         absolute
         inset-0
         "
-
       >
-
         <Image
-
           src="/images/hero.jpg"
-
-          alt="Shree Krishna Studio Wedding"
-
+          alt="Wedding Photographer in Surat & Gujarat - Shree Krishna Studio"
           fill
-
           priority
-
           sizes="100vw"
-
           className="
           object-cover
           "
-
         />
-
       </motion.div>
-
-
-
-
 
       {/* Overlay */}
 
-
-      <div className="
+      <div
+        className="
       absolute
       inset-0
       bg-black/70
       "
       />
 
-
-
-      <div className="
+      <div
+        className="
       absolute
       inset-0
       bg-gradient-to-r
@@ -93,54 +68,39 @@ export default function Hero() {
       "
       />
 
-
-
-
-
-
-
       {/* Content */}
 
-
-      <div className="
+      <div
+        className="
       relative
       z-10
       w-full
       px-6
       pt-28
       pb-20
-      ">
-
-
-        <div className="
+      "
+      >
+        <div
+          className="
         max-w-5xl
         mx-auto
         text-center
-        ">
-
-
-
-
+        "
+        >
           {/* Badge */}
 
-
           <motion.span
-
             initial={{
-              opacity:0,
-              y:-30
+              opacity: 0,
+              y: -30,
             }}
-
             animate={{
-              opacity:1,
-              y:0
+              opacity: 1,
+              y: 0,
             }}
-
             transition={{
-              duration:0.8
+              duration: 0.8,
             }}
-
-
             className="
             inline-block
             rounded-full
@@ -156,130 +116,113 @@ export default function Hero() {
             tracking-[4px]
             text-green-400
             "
-
           >
-
-            Wedding • Cinematic • Photography
-
-
+            Wedding Photographer • Surat • Gujarat
           </motion.span>
-
-
-
-
-
-
-
-          {/* Heading */}
-
-
+                    {/* Heading */}
 
           <motion.h1
-
             initial={{
-              opacity:0,
-              y:50
+              opacity: 0,
+              y: 50,
             }}
-
             animate={{
-              opacity:1,
-              y:0
+              opacity: 1,
+              y: 0,
             }}
-
             transition={{
-              delay:0.2,
-              duration:0.9
+              delay: 0.2,
+              duration: 0.9,
             }}
-
-
             className="
             mt-8
-            text-5xl
-            sm:text-6xl
+            text-4xl
+            sm:text-5xl
             md:text-7xl
             font-black
             leading-tight
             text-white
             "
-
           >
+            Wedding Photographer
 
-            SHREE KRISHNA
+            <br />
 
-            <br/>
-
-            <span className="
-            text-green-400
-            ">
-
-              STUDIO
-
+            <span className="text-green-400">
+              in Surat & Gujarat
             </span>
-
-
           </motion.h1>
 
+          {/* Studio Name */}
 
-
-
-
+          <motion.h2
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.4,
+            }}
+            className="
+            mt-5
+            text-xl
+            md:text-3xl
+            font-bold
+            tracking-[6px]
+            text-white
+            "
+          >
+            SHREE KRISHNA STUDIO
+          </motion.h2>
 
           {/* Description */}
 
-
-
           <motion.p
-
             initial={{
-              opacity:0
+              opacity: 0,
             }}
-
             animate={{
-              opacity:1
+              opacity: 1,
             }}
-
             transition={{
-              delay:0.6
+              delay: 0.6,
             }}
-
             className="
             mx-auto
             mt-7
-            max-w-3xl
+            max-w-4xl
             text-base
             md:text-xl
             leading-8
             text-gray-300
             "
-
           >
-
-            Capturing timeless love stories with cinematic wedding
-            photography and films. Every frame is crafted to become
-            a memory you&apos;ll cherish forever.
-
-
+            Premium Wedding Photography, Cinematic Wedding Films,
+            Pre Wedding Shoots, Drone Coverage, Engagement Photography,
+            Haldi Photography and Luxury Wedding Albums across
+            Surat & Gujarat. We capture timeless love stories with
+            creativity, emotion and cinematic excellence.
           </motion.p>
-                    {/* Buttons */}
 
+          {/* Buttons */}
 
           <motion.div
-
             initial={{
-              opacity:0,
-              y:30
+              opacity: 0,
+              y: 30,
             }}
-
             animate={{
-              opacity:1,
-              y:0
+              opacity: 1,
+              y: 0,
             }}
-
             transition={{
-              delay:0.9,
-              duration:0.7
+              delay: 0.9,
+              duration: 0.7,
             }}
-
             className="
             mt-10
             flex
@@ -288,24 +231,15 @@ export default function Hero() {
             justify-center
             gap-5
             "
-
           >
-
-
-
             <motion.a
-
               href="#contact"
-
               whileHover={{
-                scale:1.05
+                scale: 1.05,
               }}
-
               whileTap={{
-                scale:0.95
+                scale: 0.95,
               }}
-
-
               className="
               group
               flex
@@ -323,35 +257,20 @@ export default function Hero() {
               transition
               hover:bg-green-600
               "
-
             >
+              <Camera size={22} />
 
-              <Camera
-                size={22}
-              />
-
-              Book Your Shoot
-
-
+              Book Your Wedding Shoot
             </motion.a>
 
-
-
-
-
-
             <motion.a
-
               href="#gallery"
-
               whileHover={{
-                scale:1.05
+                scale: 1.05,
               }}
-
               whileTap={{
-                scale:0.95
+                scale: 0.95,
               }}
-
               className="
               flex
               items-center
@@ -370,48 +289,27 @@ export default function Hero() {
               hover:bg-white
               hover:text-black
               "
-
             >
+              <Play size={20} />
 
-              <Play
-                size={20}
-              />
-
-              View Gallery
-
-
+              View Wedding Gallery
             </motion.a>
-
-
           </motion.div>
-
-
-
-
-
-
-
-          {/* Stats */}
-
-
+                    {/* Stats */}
 
           <motion.div
-
             initial={{
-              opacity:0,
-              y:40
+              opacity: 0,
+              y: 40,
             }}
-
             animate={{
-              opacity:1,
-              y:0
+              opacity: 1,
+              y: 0,
             }}
-
             transition={{
-              delay:1.2,
-              duration:0.8
+              delay: 1.2,
+              duration: 0.8,
             }}
-
             className="
             mt-16
             grid
@@ -419,43 +317,33 @@ export default function Hero() {
             gap-6
             md:grid-cols-4
             "
-
           >
-
-
-
             {[
               {
-                number:"500+",
-                title:"Happy Clients"
+                number: "500+",
+                title: "Happy Clients",
               },
 
               {
-                number:"1000+",
-                title:"Events Covered"
+                number: "1000+",
+                title: "Events Covered",
               },
 
               {
-                number:"8+",
-                title:"Years Experience"
+                number: "8+",
+                title: "Years Experience",
               },
 
               {
-                number:"100%",
-                title:"Client Satisfaction"
-              }
-
-            ].map((item)=>(
-
-
+                number: "100%",
+                title: "Client Satisfaction",
+              },
+            ].map((item) => (
               <motion.div
-
                 key={item.title}
-
                 whileHover={{
-                  y:-8
+                  y: -8,
                 }}
-
                 className="
                 rounded-2xl
                 bg-black/30
@@ -464,82 +352,52 @@ export default function Hero() {
                 border-white/10
                 p-5
                 "
-
               >
-
-
-                <h2 className="
+                <h2
+                  className="
                 text-3xl
                 md:text-4xl
                 font-bold
                 text-green-400
-                ">
-
+                "
+                >
                   {item.number}
-
                 </h2>
 
-
-                <p className="
+                <p
+                  className="
                 mt-2
                 text-sm
                 text-gray-300
-                ">
-
+                "
+                >
                   {item.title}
-
                 </p>
-
-
               </motion.div>
-
-
             ))}
-
-
-
           </motion.div>
-
-
-
-
         </div>
-
-
       </div>
-
-
-
-
-
-
-
 
       {/* Scroll Down */}
 
-
-
       <motion.div
-
         animate={{
-          y:[0,12,0]
+          y: [0, 12, 0],
         }}
-
         transition={{
-          duration:1.8,
-          repeat:Infinity
+          duration: 1.8,
+          repeat: Infinity,
         }}
-
         className="
         absolute
         bottom-8
         left-1/2
         -translate-x-1/2
         "
-
       >
-
-        <div className="
+        <div
+          className="
         h-12
         w-7
         rounded-full
@@ -547,20 +405,16 @@ export default function Hero() {
         border-white/70
         flex
         justify-center
-        ">
-
-
+        "
+        >
           <motion.div
-
             animate={{
-              y:[0,10,0]
+              y: [0, 10, 0],
             }}
-
             transition={{
-              duration:1.2,
-              repeat:Infinity
+              duration: 1.2,
+              repeat: Infinity,
             }}
-
             className="
             mt-2
             h-3
@@ -568,20 +422,9 @@ export default function Hero() {
             rounded-full
             bg-green-400
             "
-
           />
-
-
         </div>
-
-
       </motion.div>
-
-
-
     </section>
-
-
   );
-
 }
