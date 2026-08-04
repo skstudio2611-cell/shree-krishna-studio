@@ -15,8 +15,9 @@ import ScrollToTop from "@/components/ScrollToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import Stats from "@/components/Stats";
 import BookingForm from "@/components/BookingForm";
-import Reviews from "@/components/Reviews";
 import GoogleReviews from "@/components/GoogleReviews";
+import FAQ from "@/components/FAQ";
+
 
 export default function Home() {
   return (
@@ -34,8 +35,8 @@ export default function Home() {
         <Gallery />
         <Testimonials />
         <GoogleReviews />
+        <FAQ />
         <WhyChoose />
-        <Reviews />
         <Contact />
         <BookingForm />
       </main>
