@@ -17,7 +17,7 @@ import Stats from "@/components/Stats";
 import BookingForm from "@/components/BookingForm";
 import GoogleReviews from "@/components/GoogleReviews";
 import FAQ from "@/components/FAQ";
-
+import InstagramShowcase from "@/components/InstagramShowcase";
 
 export default function Home() {
   return (
@@ -36,6 +36,7 @@ export default function Home() {
         <Testimonials />
         <GoogleReviews />
         <FAQ />
+        <InstagramShowcase />
         <WhyChoose />
         <Contact />
         <BookingForm />
