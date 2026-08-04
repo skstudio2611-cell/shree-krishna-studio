@@ -16,6 +16,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Stats from "@/components/Stats";
 import BookingForm from "@/components/BookingForm";
 import Reviews from "@/components/Reviews";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Stats />
         <Gallery />
         <Testimonials />
+        <GoogleReviews />
         <WhyChoose />
         <Reviews />
         <Contact />
