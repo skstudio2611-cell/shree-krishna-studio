@@ -15,7 +15,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import LoadingScreen from "@/components/LoadingScreen";
 import Stats from "@/components/Stats";
 import BookingForm from "@/components/BookingForm";
-
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -33,6 +33,7 @@ export default function Home() {
         <Gallery />
         <Testimonials />
         <WhyChoose />
+        <Reviews />
         <Contact />
         <BookingForm />
       </main>
